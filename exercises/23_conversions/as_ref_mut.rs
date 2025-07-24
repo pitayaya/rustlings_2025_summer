@@ -8,7 +8,7 @@ use core::convert::{AsMut, AsRef};
 // (`.len()` returns the number of bytes in a string).
 // TODO: Add the `AsRef` trait appropriately as a trait bound.
 fn byte_counter<T: AsRef<str>>(arg: T) -> usize {
-    arg.as_ref().len()
+    arg.as_ref().as_bytes().len()
 }
 
 // Obtain the number of characters (not bytes) in the given argument.
