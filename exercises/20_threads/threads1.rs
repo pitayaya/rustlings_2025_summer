@@ -22,8 +22,9 @@ fn main() {
 
     let mut results = Vec::new();
     for handle in handles {
-        // TODO: Collect the results of all threads into the `results` vector.
-        // Use the `JoinHandle` struct which is returned by `thread::spawn`.
+        if let Ok(duration) = handle.join() {
+            results.push(duration);
+        }
     }
 
     if results.len() != 10 {
