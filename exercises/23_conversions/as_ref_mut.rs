@@ -2,7 +2,7 @@
 // about them at https://doc.rust-lang.org/std/convert/trait.AsRef.html and
 // https://doc.rust-lang.org/std/convert/trait.AsMut.html, respectively.
 
-use core::convert::{AsMut, AsRef};
+use std::convert::{AsMut, AsRef};
 
 // Obtain the number of bytes (not characters) in the given argument
 // (`.len()` returns the number of bytes in a string).
